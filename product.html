@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        table{border: 2px solid blue; width: 50%; height: 100px; margin: auto;}
+        tr{border: 2px solid blue;}
+        th{border: 2px solid blue;}
+        td{border: 2px solid blue;}
+    </style>
+    <title>product</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Name</th> <th>Size/Color</th><th>Price</th>
+        </tr>
+            <td><select name="company" id="company">
+                <option value="">--select--</option>
+                <option value="product">acer</option>
+                <option value="product">dell</option>
+                <option value="product">hp</option>
+                <option value="product">aoc</option>
+                <option value="product">lenovo</option>
+                <option value="product">apple</option></td>
+            
+                <td><select name="size" id="size">
+                <option value="">--select--</option>
+                <option value="small">small</option>
+                <option value="large">large</option>
+                <option value="xxl">XXL</option>
+                <option value="red">red</option>
+                <option value="green">green</option>
+                <option value="black">black</option>
+            </select> 
+           
+                <td><select name="price" id="price">
+                    <option class="a" value="">--select--</option>
+                    <option class="a">1000</option>
+                    <option class="a">1500</option>
+                    <option class="a">2000</option>
+                    <option class="a">2500</option>
+                    <option class="a">3000</option>
+                    <option class="a">3500</option>
+            </td>
+        </tr>
+    </table>
+    <script>
+      $('#size').on('change', '.a' , function () {
+     console.log("value is " + $(this).find(":selected").val(1000));
+});
+    </script>
+    
+</body>
+</html>

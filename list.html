@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list</title>
+</head>
+<body>
+    <div>
+        <h1>Product List</h1>
+        <ul id="disorganished">
+          <li><a href="">Cloths</a><button id="first_list">+</button></li>
+          <li>
+            <ul id="garments">
+              <li><a href="">Trouser</a><button class="garments_list">+</button> </li>
+              <li><a href="">T-shirt</a><button class="garments_list">+</button> </li>
+            </ul>
+          </li>
+          <li><a href="">Electronics</a><button id="appliances">+</button></li>
+          <li>
+            <ul id="appliances_list">
+              <li><a href="">Mobiles</a><button class="appliancesBtn">+</button></li>
+              <li><a href="">Tabs</a><button class="appliancesBtn">+</button></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <script>
+          $(".garments_list").click(()=>{
+       $("#garments").append(`<li><a href="">Trouser</a><button class="garments_list">+</button> </li>`)
+     });
+     $(".appliancesBtn").click(()=>{
+      $("#appliances_list").append(`<li><a href="">Tabs</a><button class="appliancesBtn">+</button></li>`)
+    });
+
+    $("#first_list").click(()=>{
+      $("#disorganized").append(` <li><a href="">Cloths</a><button id="first_list">+</button></li>
+      <li>
+        <ul id="garments">
+          <li><a href="">T-shirt</a><button class="garments_list">+</button> </li>
+          <li><a href="">Trouser</a><button class="garments_list">+</button> </li>
+        </ul>
+      </li>`)
+    });
+    $("#appliances-ul").click(()=>{
+      $("#main_ul").append(`  <li><a href="">Electronics</a><button id="appliances-ul">+</button></li>
+      <li>
+        <ul id="li-add">
+          <li><a href="">Mobiles</a><button class="appliances-li">+</button></li>
+          <li><a href="">Tabs</a><button class="appliances-li">+</button></li>
+        </ul>
+      </li>
+    </ul>`)
+    });
+      </script>
+    
+</body>
+</html>
